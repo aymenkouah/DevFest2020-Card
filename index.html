@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./Style.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+    <script>
+        function Clickevent () {
+            var element = document.getElementById("card");
+            element.classList.add("modal");  
+            element.classList.remove("hover");  
+            var element2 = document.getElementById("other");
+            element2.classList.remove("invisible");
+            var element3 = document.getElementById("btn2");
+            element3.classList.remove("invisible");
+        }
+
+        function Clickevent2 () {
+            var element = document.getElementById("card");
+            element.classList.remove("modal");  
+            element.classList.add("hover");  
+            var element2 = document.getElementById("other");
+            element2.classList.add("invisible");
+            var element3 = document.getElementById("btn2");
+            element3.classList.add("invisible");
+        }
+        
+    </script>
+    
+    <!-- <script type="text/javascript"> 
+        function mouse() {
+            el = document.getElementById('card')
+            if (el) {
+                el.addEventListener("mouseover", function(){ 
+                var element = document.getElementById("card");
+                element.classList.add("hover"); 
+                
+                }); }
+            }
+        function mouseo() {
+            el2=document.getElementById('card')
+            if(el2) {
+                el2.addEventListener("mouseout", function(){ 
+                var element2 = document.getElementById("card");
+                element2.classList.remove("hover"); 
+            });}}
+            
+    </script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100&display=swap" rel="stylesheet"> 
+
+    <title>Card & Modal Challenge</title>
+</head>
+<body>
+
+ 
+    <div class="main-container">
+        <div class="card-container">
+            <div class="card hover" id="card">
+                
+                <div class="card-body ">
+                    <h1 class="card-header">Jane Doe</h1>
+                    <div class="quote ">
+                        
+                        <p> <i class="fas fa-quote-left quote-left"></i><span> CSS is good but Sass is better </span> <i class="fas fa-quote-right quote-right"></i> </p>
+                        
+                    </div>
+
+                    <div class="avatar">
+                        <img id="avatar" src="https://source.unsplash.com/rDEOVtE7vOs/640x640">
+                    </div>
+
+                    <div class="info">
+                        <div class="paragraph">
+                            <p>Hi there, My name is Doe, Jane Doe. I am a Front-end developper looking for my first ever job. <button class="btn" onclick="Clickevent()" >see more...</button> </p>
+                            
+                        </div>
+                        <div class="other invisible" id="other">
+                            <ul class="list">
+                                <li class="elem"><span class="title">Programming Languages:</span><p>HTML, CSS, Bootstrap4, Sass, Less, JavaScript </p></li>
+                                <li class="elem"><span class="title">Certification:</span><p>
+                                    Coursera, Skillshare
+                                </p></li>
+                                <li class="elem"><span class="title">Interests:</span><p>Potato</p></li>
+                                <!-- <li class="elem"><span class="title"></span></li> -->
+                            </ul>
+                            
+                        </div>
+                        
+                        
+                    </div>
+                    <button class="btn2 invisible" id="btn2" onclick="Clickevent2()">Exit</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
